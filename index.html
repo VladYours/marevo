@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="b4w.min.js"></script>
+    <script type="text/javascript" src="example.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        body {
+            margin: 10px;
+            padding: 0;
+            text-align: center;
+        }
+        #upBtn {
+            border-radius: 30px;
+        }
+        #cont {
+            width: 100%; 
+            height: 50vh; 
+            margin-top: 5%;  
+            overflow: hidden;
+        }
+        #canvas3d {
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden;
+        }
+        #canvas3d canvas {
+            position: static !important;
+        }
+        #load {
+              position: absolute;
+              top: 0px;
+              left: 50vw;
+              margin-left: -150px;
+        }
+        .items_container {
+            text-align: left;
+            margin-top: 10px;
+        }
+        hr {
+            margin: 0px;
+        }
+        .items_list {
+            margin-top: 14px;
+        }
+        .item {
+            margin-top: 0px;
+            text-align: center;
+            display:inline-block;
+            margin-right: 20px;
+        }
+        .it {
+            width: 40px; 
+            height: 40px; 
+            border: solid; 
+            border-color: white;
+            border-radius: 50px;
+        }
+        .btn-outline-primary {
+            border-radius: 20 px;
+        }
+    </style>
+</head>
+<body >
+    
+<button type="button" class="btn btn-primary" id="upBtn">See In Real Life</button>
+    
+<div id="cont">
+    <div id="canvas3d"></div>
+    <img id="load" src="loading.gif"/>
+</div>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+        
+        <div class="items_container">
+            <label class="container_title">BODY COLOR</label>
+            <hr />
+            <div class="items_list">
+                
+                <div class="item">
+                    <a href="#" onclick="textuR('brown.jpg')"><img src="brown.jpg" class="it"></a>
+                    <br>
+                    <label class="item_title">Brown</label>
+                </div>
+                
+                <div class="item">
+                    <a href="#" onclick="textuR('black.jpg')"><img src="black.jpg" class="it"></a>
+                    <br>
+                    <label class="item_title">Black</label>
+                </div>
+                
+                <div class="item">
+                    <a href="#" onclick="textuR('blue.jpg')"><img src="blue.jpg" class="it"></a>
+                    <br>
+                    <label class="item_title">Blue</label>
+                </div>
+                
+            </div>
+        </div>
+      
+    </div>
+    <div class="col-sm-12 col-md-4">
+      
+      <div class="items_container">
+            <label class="container_title">METAL COLOR</label>
+            <hr />
+            <div class="items_list">
+                
+                <div class="item">
+                    <a href="#" onclick="textuR1('silverM.jpg')"><img src="silverM.jpg" class="it"></a>
+                    <br>
+                    <label class="item_title">Brown</label>
+                </div>
+                
+                <div class="item">
+                    <a href="#" onclick="textuR1('goldM.jpg')"><img src="goldM.jpg" class="it"></a>
+                    <br>
+                    <label class="item_title">Gold</label>
+                </div>
+                
+                <div class="item">
+                    <a href="#" onclick="textuR1('blackM.jpg')"><img src="blackM.jpg" class="it"></a>
+                    <br>
+                    <label class="item_title">Black</label>
+                </div>
+                
+            </div>
+        </div>
+      
+    </div>
+    <div class="col-sm-12 col-md-4">
+      
+      <div class="items_container">
+            <label class="container_title">MATERIAL</label>
+            <hr />
+            <div class="items_list">
+                
+                <div class="item">
+                    <a href="#" onclick="textuR1('silverM.jpg')" type="button" class="btn btn-outline-primary">Leather</a>
+                </div>
+                
+                <div class="item">
+                    <a href="#" onclick="textuR1('goldM.jpg')" type="button" class="btn btn-outline-primary">Fabric</a>
+                </div>
+                
+                <div class="item">
+                    <a href="#" onclick="textuR1('blackM.jpg')" type="button" class="btn btn-outline-primary">Denim</a>
+                </div>
+                
+            </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+<script type="text/javascript">
+    
+    function textuR(fn) {
+        b4w.require("example_main").ct(fn);
+        textuR2(fn);
+    }
+    
+    function textuR1(fn) {
+        b4w.require("example_main").ct1(fn);
+    }
+    
+    function textuR2(fn) {
+        b4w.require("example_main").ct2(fn);
+    }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
